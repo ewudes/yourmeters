@@ -72,11 +72,25 @@ $(document).ready(function() {
 	
 });
 
-$(window).load(function() {
-	$(".top_header").animated("fadeInDown", "fadeOut");
-	$(".top_phone").animated("fadeInRight", "fadeOut");
-	$(".tx-about").animated("fadeInRight", "fadeOut");
-	$(".profi_item").animated("fadeInRight", "fadeOut");
-	$("footer").animated("fadeIn", "fadeOut");
+// $(window).load(function() {
+// 	$(".top_header").animated("fadeInDown", "fadeOut");
+// 	$(".top_phone").animated("fadeInRight", "fadeOut");
+// 	$(".tx-about").animated("fadeInRight", "fadeOut");
+// 	$(".profi_item").animated("fadeInRight", "fadeOut");
+// 	$("footer").animated("fadeIn", "fadeOut");
 
-});
+// });
+
+
+var abv = "apartment"; 
+ function vkladki(x,y) {
+ var mostrar = document.getElementById(x);
+ var actual = document.getElementById(abv);
+ if(mostrar==actual) {return false;} 
+ actual.className="skryt";
+ mostrar.className="vid";
+ abv = x;
+ document.getElementById('vkladka1').style.background ='#ECEDEF';
+ if (self.ramka) ramka.style.background = '#ECEDEF';
+ y.style.background = '#B7BBC2'; ramka = y; 
+}
