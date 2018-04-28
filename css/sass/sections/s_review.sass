@@ -9,7 +9,36 @@
 
 .review-wrap
 	display: flex
-	justify-content: center
+	flex-direction: column
 	width: 1000px	
 	height: 100%
 	background: rgba(#3d3d3d, .6)
+	color: #fff
+
+.review-item__title
+	cursor: pointer
+	&::before
+		content: ''
+		width: 0
+		height: 0
+		margin-right: 0.625rem
+		border: 0.3125rem solid transparent
+		border-top-color: #f9b43b
+		border-bottom: none
+
+.review-item__content
+	display: flex
+	height: 0
+	overflow: hidden
+
+.review-item__pic
+	width: 150px		
+
+.review-item--active
+	height: 200px
+			
+.review-item--active .review-item__content
+	overflow: inherit
+
+.review-item__descr
+	padding: 0 10px		

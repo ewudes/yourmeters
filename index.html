@@ -397,15 +397,70 @@
 		<section class="section s_review">
 			<div class="review-wrap">
 				<h2 class="title_review">отзывы наших клиентов</h2>
+				<ul class="review__list">
+					<li class="review__item">
+						<h3 class="review-item__title">отзыв 1</h3>
+						<div class="review-item__content">
+							<div class="revirew-item__img-wrap">
+								<img src="img/content/review.png" alt="review_image" class="review-item__pic">
+							</div>
+							<div class="review-item__descr">
+								<div class="review-item__descr-title">Иван Иванов</div>
+								<div class="review-item__descr-txt">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita dignissimos eaque consequuntur accusantium reprehenderit! Itaque quo autem quaerat dignissimos hic, excepturi doloribus aliquam praesentium quos aliquid assumenda unde deleniti. Sint.</div>
+							</div>
+						</div>
+					</li>
+					<li class="review__item">
+						<h3 class="review-item__title">отзыв 2</h3>
+						<div class="review-item__content">
+							<div class="revirew-item__img-wrap">
+								<img src="img/content/review.png" alt="review_image" class="review-item__pic">
+							</div>
+							<div class="review-item__descr">
+								<div class="review-item__descr-title">Иван Иванов</div>
+								<div class="review-item__descr-txt">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita dignissimos eaque consequuntur accusantium reprehenderit! Itaque quo autem quaerat dignissimos hic, excepturi doloribus aliquam praesentium quos aliquid assumenda unde deleniti. Sint.</div>
+							</div>
+						</div>
+					</li>
+					<li class="review__item">
+						<h3 class="review-item__title">отзыв 3</h3>
+						<div class="review-item__content">
+							<div class="revirew-item__img-wrap">
+								<img src="img/content/review.png" alt="review_image" class="review-item__pic">
+							</div>
+							<div class="review-item__descr">
+								<div class="review-item__descr-title">Иван Иванов</div>
+								<div class="review-item__descr-txt">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita dignissimos eaque consequuntur accusantium reprehenderit! Itaque quo autem quaerat dignissimos hic, excepturi doloribus aliquam praesentium quos aliquid assumenda unde deleniti. Sint.</div>
+							</div>
+						</div>
+					</li>
+					<li class="review__item">
+						<h3 class="review-item__title">отзыв 4</h3>
+						<div class="review-item__content">
+							<div class="revirew-item__img-wrap">
+								<img src="img/content/review.png" alt="review_image" class="review-item__pic">
+							</div>
+							<div class="review-item__descr">
+								<div class="review-item__descr-title">Иван Иванов</div>
+								<div class="review-item__descr-txt">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita dignissimos eaque consequuntur accusantium reprehenderit! Itaque quo autem quaerat dignissimos hic, excepturi doloribus aliquam praesentium quos aliquid assumenda unde deleniti. Sint.</div>
+							</div>
+						</div>
+					</li>
+				</ul>
 			</div>
 		</section>
 		<section class="section s_contacts">
 			<div class="contacts_top">
 				<h2>как нас найти:</h2>
 				<h3>Саратов, ул.Центральная, дом 22, корпус 2</h3>
-				<div class="map">
-						<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4e1f3e10d5ae272f1965c54c04175238a0efdcc59db0ddd2eb786acd137a3781&amp;height=480&amp;lang=ru_RU&amp;scroll=true"></script>
-				</div>
+			</div>
+			<div class="google-map" id="map">
+				<script 
+                    src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+                </script>
+                <script async defer
+                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAY7JfrY3XoLAPkkjbnc3sYV-GqDlaegNs&callback=initMap">
+                </script>
 			</div>
 			<footer>
 				<h2>Остались вопросы?</h2>
@@ -436,6 +491,8 @@
 	
 	<script src="js/common.js"></script>
 	<script src="js/slider.js"></script>
+	<script src="js/review.js"></script>
+	<script src="js/contacts.js"></script>
 
 	<!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
 	<!-- Google Analytics counter --><!-- /Google Analytics counter -->
