@@ -2,8 +2,8 @@ body
 	font-family: "RobotoRegular", sans-serif
 	color: $text-color
 	font-weight: normal
-	font-size: 16px
-	min-width: 320px
+	font-size: rem(16px)
+	min-width: rem(320px)
 	line-height: 1.6
 	-webkit-font-smoothing: antialised
 	overflow-x: hidden
@@ -12,8 +12,8 @@ body
 
 h1
 	color: #fff
-	font-size: 40px
-	line-height: 56px
+	font-size: rem(35px)
+	line-height: rem(56px)
 	font-family: "RobotoBold", sans-serif	
 	margin: 0
 	text-transform: uppercase
@@ -31,22 +31,23 @@ section, footer
 		h2, h3, p
 			color: #fff
 	h2
-		font-size: 38px
-		line-height: 56px
+		font-size: rem(38px)
+		line-height: rem(56px)
 		font-family: "CleanvertisingLight", sans-serif
 		text-align: center
 		font-weight: normal
 		text-transform: uppercase
 
 .container
-	width: 1180px
+	max-width: rem(1180px)
+	height: 100%
+	padding: 0 5%
 	magrin: 0 auto
-	height: 100vh
 			
 body input:focus:required:invalid,
 body textarea:focus:required:invalid
 	color: red
-	box-shadow: $red-color 0 0 0 2px
+	box-shadow: $red-color 0 0 0 rem(2px)
 	border-color: $red-color
 body input:required:valid,
 body textarea:required:valid
@@ -64,12 +65,12 @@ body textarea:required:valid
 		color: #fff	
 		
 .button
-	width: 200px
-	height: 50px
-	border-radius: 5px
+	width: rem(200px)
+	height: rem(50px)
+	border-radius: rem(5px)
 	border: none
 	color: #fff
-	font-size: 18px
+	font-size: rem(18px)
 	font-family: "CleanvertisingLight", sans-serif
 	text-transform: uppercase
 	cursor: pointer
