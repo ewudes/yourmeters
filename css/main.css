@@ -18,7 +18,7 @@ body {
   color: #333;
   font-weight: normal;
   font-size: 1rem;
-  min-width: 20rem;
+  width: 100%;
   line-height: 1.6;
   -webkit-font-smoothing: antialised;
   overflow-x: hidden;
@@ -437,14 +437,13 @@ label {
 .slider-wrap {
   display: flex;
   overflow: hidden;
-  width: 90%;
-  background: #F9FAFC; }
+  width: 90%; }
 
 .items {
   display: flex;
   position: relative;
   color: #444;
-  font-size: 1.875rem;
+  font-size: 1.25rem;
   will-change: right;
   transition: right 0.3s; }
 
@@ -457,13 +456,16 @@ label {
 .slider__left, .slider__right {
   width: 50%; }
 
+.slider__right {
+  padding: 0 0.625rem; }
+
 .slider__img {
   display: flex;
   flex-direction: column;
   align-items: center; }
 
 .slider__pic {
-  width: 90%; }
+  width: 60%; }
 
 .s_review {
   display: flex;
@@ -483,7 +485,9 @@ label {
   color: #fff; }
 
 .review-item__title {
-  cursor: pointer; }
+  display: flex;
+  cursor: pointer;
+  line-height: 0; }
   .review-item__title::before {
     content: "";
     width: 0;
@@ -504,6 +508,9 @@ label {
 .review-item--active {
   height: 12.5rem; }
 
+.review-item--active .review-item__title::before {
+  transform: rotate(180deg); }
+
 .review-item--active .review-item__content {
   overflow: inherit; }
 
@@ -513,44 +520,31 @@ label {
 .s_contacts {
   position: relative;
   display: flex;
-  padding-bottom: 0; }
-  .s_contacts h2 {
-    margin-bottom: 0.625rem; }
-  .s_contacts h3 {
-    text-align: center;
-    font-family: "CleanvertisingLight", sans-serif; }
+  flex-direction: column; }
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  background: #fff;
+  width: 100%;
+  height: 100px; }
 
 .google-map {
   position: absolute;
-  top: 0;
-  left: 0;
-  margin-top: 9.375rem;
   width: 100%;
-  height: 31.25rem; }
+  height: 100vh; }
 
-footer {
-  margin-top: 34.375rem; }
-  footer .button_wrap {
-    text-align: center;
-    margin-top: 2.1875rem; }
-  footer h2 {
-    text-transform: none;
-    font-size: 1.875rem;
-    margin-bottom: 1.25rem; }
-  footer h3 {
-    text-align: center;
-    font-family: "Tahoma", sans-serif;
-    text-transform: uppercase;
-    margin-bottom: 0;
-    color: #9B1818;
-    font-weight: normal; }
-  footer .f_phone {
-    font-size: 1.875rem;
-    margin-top: 0;
-    line-height: 1.875rem; }
-  footer p {
-    font-size: 1.125rem;
-    text-align: center;
-    margin-bottom: 1.875rem; }
+.f_wrap {
+  display: flex;
+  padding: 10px 0; }
+
+.f_item {
+  margin: 0 10px;
+  padding: 0 10px;
+  border-left: 2px solid #3d3d3d; }
+  .f_item:first-child {
+    border: none; }
 
 /*# sourceMappingURL=main.css.map */

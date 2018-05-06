@@ -16,7 +16,9 @@
 	color: #fff
 
 .review-item__title
+	display: flex
 	cursor: pointer
+	line-height: 0
 	&::before
 		content: ''
 		width: 0
@@ -36,6 +38,10 @@
 
 .review-item--active
 	height: rem(200px)
+
+.review-item--active .review-item__title
+	&::before
+		transform: rotate(180deg)
 			
 .review-item--active .review-item__content
 	overflow: inherit
