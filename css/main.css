@@ -24,7 +24,7 @@ body {
 
 h1 {
   color: #fff;
-  font-family: "RobotoBold", sans-serif;
+  font-family: "CleanvertisingLight", sans-serif;
   margin: 0;
   text-transform: uppercase; }
 
@@ -100,34 +100,37 @@ body textarea:required:valid {
   font-family: "CleanvertisingLight", sans-serif; }
 
 .header {
-  display: flex;
-  align-items: center; }
+  display: flex; }
 
 .header-wrap {
   width: 100%;
-  display: flex;
-  align-items: center; }
+  display: flex; }
   @media screen and (max-width: 768px) {
     .header-wrap {
-      flex-direction: column; } }
+      flex-direction: column;
+      position: absolute;
+      align-items: center; } }
 
 .logo {
   content: url("../img/logo.png");
-  width: 6.25rem;
-  height: 5.625rem;
-  margin-top: 1.875rem; }
+  width: 7.5rem;
+  height: 6.875rem;
+  margin-top: 1.25rem; }
 
 .nav {
   display: flex;
   margin-left: auto;
   list-style-type: none;
-  margin-top: 2.5rem; }
-  @media screen and (max-width: 855px) {
+  margin-top: 1.25rem; }
+  @media screen and (max-width: 768px) {
     .nav {
       display: none; } }
 
 .nav__list {
   display: flex; }
+  @media screen and (max-width: 875px) {
+    .nav__list {
+      display: none; } }
 
 .nav__item {
   margin: 0 0.625rem; }
@@ -137,19 +140,23 @@ body textarea:required:valid {
     .nav__item a:hover {
       text-decoration: underline; }
 
-@media screen and (max-width: 855px) {
-  .cont {
-    margin-left: auto; } }
-@media screen and (max-width: 768px) {
-  .cont {
-    margin: auto; } }
+.cont {
+  color: #fff; }
+  @media screen and (max-width: 875px) {
+    .cont {
+      margin-left: auto;
+      margin-right: 3.125rem; } }
+  @media screen and (max-width: 768px) {
+    .cont {
+      margin: 1.25rem auto; } }
 
 .cont__city {
   margin-bottom: 0;
+  margin-top: 0;
   text-align: right; }
   @media screen and (max-width: 768px) {
     .cont__city {
-      display: none; } }
+      text-align: center; } }
 
 .cont__phone {
   color: #fff;
@@ -159,7 +166,16 @@ body textarea:required:valid {
 @media screen and (max-width: 768px) {
   .title {
     text-align: center;
-    font-size: 0.625rem; } }
+    font-size: 1rem; } }
+@media screen and (max-width: 480px) {
+  .title {
+    font-size: 0.875rem; } }
+
+.title__btn {
+  display: none; }
+  @media screen and (max-width: 768px) {
+    .title__btn {
+      display: block; } }
 
 .designer {
   width: 710px; }
@@ -169,7 +185,7 @@ body textarea:required:valid {
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 0 3.125rem; } }
+      margin-top: 9.375rem; } }
 
 .vklad > a {
   display: inline-block;
@@ -193,13 +209,20 @@ body textarea:required:valid {
   text-decoration: none; }
 
 .designer__wrap {
-  height: 25rem;
+  height: 18.75rem;
   padding: 0.9375rem;
   margin-top: 1.25rem;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   background: rgba(235, 236, 238, 0.4); }
+  @media screen and (max-width: 768px) {
+    .designer__wrap {
+      display: none; } }
+
+.designer--small-width {
+  display: block;
+  height: 93vh; }
 
 .designer__wrap .vid {
   display: block; }
@@ -221,12 +244,14 @@ body textarea:required:valid {
   position: relative;
   display: flex;
   background: #B7BBC2;
-  height: 15.625rem;
+  height: 12.5rem;
   border-radius: 0 0.3125rem 0.3125rem 0.3125rem;
   padding: 1.25rem 0.625rem 0; }
   @media screen and (max-width: 768px) {
     .searchform {
-      flex-direction: column; } }
+      flex-direction: column;
+      border-radius: 0.3125rem 0.3125rem 0.3125rem 0.3125rem;
+      height: 70vh; } }
 
 input, select, option {
   margin-bottom: 0.3125rem;
@@ -254,6 +279,9 @@ label {
     label {
       width: 9.375rem;
       text-align: left; } }
+  @media screen and (max-width: 480px) {
+    label {
+      width: 6.25rem; } }
 
 .sel__rooms {
   width: 10rem; }
@@ -271,11 +299,18 @@ label {
 .submit_selling {
   margin-left: auto;
   margin-right: 1.25rem; }
+  @media screen and (max-width: 768px) {
+    .submit_selling {
+      margin: 0; } }
 
 .label_selling {
   font-size: 1.875rem;
   margin-left: 0.625rem;
   font-family: "CleanvertisingLight", sans-serif; }
+  @media screen and (max-width: 768px) {
+    .label_selling {
+      font-size: 1.5625rem;
+      margin: 0; } }
 
 .arrow-wrap {
   width: 100%;
@@ -314,12 +349,15 @@ label {
 
 .hamburger-menu-link {
   vertical-align: middle;
-  position: relative;
+  position: absolute;
   height: 1.375rem;
   align-items: center;
   margin-left: 1.875rem;
-  display: none; }
-  @media screen and (max-width: 855px) {
+  margin-top: 1.875rem;
+  margin-right: 1.875rem;
+  display: none;
+  right: 0; }
+  @media screen and (max-width: 875px) {
     .hamburger-menu-link {
       display: flex; } }
 

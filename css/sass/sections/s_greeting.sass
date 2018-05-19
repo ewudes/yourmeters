@@ -7,32 +7,34 @@
 
 .header
 	display: flex
-	align-items: center
 
 .header-wrap
 	width: 100%
 	display: flex
-	align-items: center
 	@include tablets
 		flex-direction: column
+		position: absolute
+		align-items: center
 
 .logo
 	content: url("../img/logo.png")
-	width: rem(100px)
-	height: rem(90px)
-	margin-top: rem(30px)
+	width: rem(120px)
+	height: rem(110px)
+	margin-top: rem(20px)
 
 .nav
 	display: flex
 	margin-left: auto
 	list-style-type: none
-	margin-top: rem(40px)
-	@include menu
+	margin-top: rem(20px)
+	@include tablets
 		display: none
 
 .nav__list
 	display: flex
-		
+	@include menu
+		display: none
+
 .nav__item
 	margin: 0 rem(10px)
 	a
@@ -42,16 +44,19 @@
 			text-decoration: underline
 
 .cont
+	color: #fff
 	@include menu
 		margin-left: auto
+		margin-right: rem(50px)
 	@include tablets
-		margin: auto
+		margin: rem(20px) auto
 
 .cont__city
 	margin-bottom: 0
+	margin-top: 0
 	text-align: right
 	@include tablets
-		display: none
+		text-align: center
 
 .cont__phone
 	color: #fff
@@ -61,7 +66,14 @@
 .title
 	@include tablets
 		text-align: center
-		font-size: rem(10px)
+		font-size: rem(16px)
+	@include phones
+		font-size: rem(14px)
+
+.title__btn
+	display: none
+	@include tablets
+		display: block
 
 .designer
 	width: 710px
@@ -70,7 +82,7 @@
 		display: flex
 		flex-direction: column
 		align-items: center
-		padding: 0 rem(50px)
+		margin-top: rem(150px)
 
 .vklad > a
 	display: inline-block
@@ -94,14 +106,20 @@
 	text-decoration: none
 
 .designer__wrap
-	height: rem(400px)	
+	height: rem(300px)	
 	padding: rem(15px)
 	margin-top: rem(20px)
 	-webkit-box-sizing: border-box
 	-moz-box-sizing: border-box
 	box-sizing: border-box
 	background: rgba(#EBECEE, .4)
-		
+	@include tablets
+		display: none
+
+.designer--small-width
+	display: block
+	height: 93vh
+
 .designer__wrap .vid
 	display: block
 
@@ -121,11 +139,13 @@
 	position: relative
 	display: flex
 	background: #B7BBC2
-	height: rem(250px)
+	height: rem(200px)
 	border-radius: 0 rem(5px) rem(5px) rem(5px)
 	padding: rem(20px) rem(10px) 0
 	@include tablets
 		flex-direction: column
+		border-radius: rem(5px) rem(5px) rem(5px) rem(5px)
+		height: 70vh
 
 input, select, option
 	margin-bottom: rem(5px)
@@ -151,6 +171,8 @@ label
 	@include tablets
 		width: rem(150px)
 		text-align: left
+	@include phones
+		width: rem(100px)
 
 .sel__rooms
 	width: rem(160px)
@@ -168,11 +190,16 @@ label
 .submit_selling
 	margin-left: auto
 	margin-right: rem(20px)
+	@include tablets
+		margin: 0
 
 .label_selling
 	font-size: rem(30px)
 	margin-left: rem(10px)
 	font-family: "CleanvertisingLight", sans-serif
+	@include tablets
+		font-size: rem(25px)
+		margin: 0
 
 .arrow-wrap
 	width: 100%
@@ -209,11 +236,14 @@ label
 
 .hamburger-menu-link
 	vertical-align: middle
-	position: relative
+	position: absolute
 	height: rem(22px)
 	align-items: center
 	margin-left: rem(30px)
+	margin-top: rem(30px)
+	margin-right: rem(30px)
 	display: none
+	right: 0
 	@include menu
 		display: flex
 
