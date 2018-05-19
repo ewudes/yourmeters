@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru-RU">
 <head>
 	<meta charset="utf-8" />
 	<title>Ваши метры</title>
 	<meta content="" name="description" />
 	<link rel="shortcut icon" href="favicon.png" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="libs/myFonts/stylesheet.css" />
-	<link rel="stylesheet" href="libs/owl/assets/owl.carousel.min.css" />
 	<link rel="stylesheet" href="libs/animate/animate.min.css" />
 	<link rel="stylesheet" href="css/main.css" />
 </head>
@@ -17,33 +16,49 @@
 		<section class="section s_greeting">
 			<div class="container container-greet">
 				<div class="header">
-					<div class="logo">
-						<div class="logo__img"></div>
+					<div class="header-wrap">
+						<div class="logo">
+							<div class="logo__img"></div>
+						</div>
+						<div class="nav nav--large-width">
+							<ul class="nav__list">
+								<li class="nav__item"><a href="#s_about" class="nav__link">о нас</a></li>
+								<li class="nav__item"><a href="#s_profi" class="nav__link">услуги</a></li>
+								<li class="nav__item"><a href="#s_work" class="nav__link">принцип работы</a></li>
+								<li class="nav__item"><a href="#s_back" class="nav__link">достижения</a></li>
+								<li class="nav__item"><a href="#s_review" class="nav__link">отзывы</a></li>
+								<li class="nav__item"><a href="#s_contacts" class="nav__link">контакты</a></li>
+							</ul>
+						</div>
+						<div class="cont">
+							<div class="cont__wrap">
+								<h2 class="cont__city">Саратов</h2>
+								<a class="cont__phone" href="tel:+79675053838">+7(967)505-38-38</a>
+							</div>	
+						</div>
 					</div>
-					<ul class="nav">
-						<li class="nav__item"><a href="#s_about">о нас</a></li>
-						<li class="nav__item"><a href="#s_profi">услуги</a></li>
-						<li class="nav__item"><a href="#s_work">принцип работы</a></li>
-						<li class="nav__item"><a href="#s_back">достижения</a></li>
-						<li class="nav__item"><a href="#s_review">отзывы</a></li>
-						<li class="nav__item"><a href="#s_contacts">контакты</a></li>
-					</ul>
-					<div class="cont">
-						<div class="cont__wrap">
-							<h2 class="cont__city">Саратов</h2>
-							<a class="cont__phone" href="tel:+79999999999">+7(999)999-99-99</a>
-						</div>	
-					</div>
-				</div>
-				<div class="title">
-					<h1>найдите свою недвижимость</h1>
-				</div>
+					<a class="hamburger-menu-link" href="">
+						<div class="hamburger-menu-link__bars"></div>
+					</a>
+				</div>				
 				<div class="designer">
+					<div class="title">
+						<h1>найдите свою недвижимость</h1>
+					</div>
 					<div class="designer__wrap">
-						<a onclick="vkladki('apartment',this);" href="javascript:void(0);" id="vkladka1">квартиры</a>
-						<a onclick="vkladki('home',this);" href="javascript:void(0);">дома</a>
-						<a onclick="vkladki('land',this);" href="javascript:void(0);">участки</a>
-						<a onclick="vkladki('commerce',this);" href="javascript:void(0);">коммерция</a>
+						<div class="vklad">
+							<a onclick="vkladki('apartment',this);" href="javascript:void(0);" id="vkladka1">квартиры</a>
+							<a onclick="vkladki('home',this);" href="javascript:void(0);">дома</a>
+							<a onclick="vkladki('land',this);" href="javascript:void(0);">участки</a>
+							<a onclick="vkladki('commerce',this);" href="javascript:void(0);">коммерция</a>
+						</div>
+						<label for="Dest" class="Validate_Required">выберите тип</label>
+						<select id="Dest" class="Validate_Required" name="Dest" aria-required="true" onChange="Selected(this)">
+							<option value="1" selected="selected">квартиры</option>
+							<option value="2">дома</option>
+							<option value="3">участки</option>
+							<option value="4">коммерция</option>
+						</select>
 						<div id="apartment" class="vid">
 							<form action="" class="searchform clearfix">
 								<div class="form_selection district">
@@ -60,8 +75,10 @@
 								</div>
 								<div class="form_selection area">
 									<label for="" class="label_title">площадь</label>
-									<input name="num" pattern="[0-9]{3}" maxlength="3" class="input_selection" placeholder="от">
-									<input name="num" pattern="[0-9]{3}" maxlength="3" class="input_selection" placeholder="до">
+									<div class="input_selection-wrap">
+										<input name="num" pattern="[0-9]{3}" maxlength="3" class="input_selection" placeholder="от">
+										<input name="num" pattern="[0-9]{3}" maxlength="3" class="input_selection" placeholder="до">
+									</div>
 								</div>
 								<div class="form_selection rooms">
 									<label for="" class="label_title">комнат</label>
@@ -79,13 +96,17 @@
 								</div>
 								<div class="form_selection floor">
 									<label for="" class="label_title">этаж</label>
-									<input name="num" pattern="[0-9]{1}" maxlength="2" class="input_selection" placeholder="от">
-									<input name="num" pattern="[0-9]{2}" maxlength="2" class="input_selection" placeholder="до">
+									<div class="input_selection-wrap">
+										<input name="num" pattern="[0-9]{1}" maxlength="2" class="input_selection" placeholder="от">
+										<input name="num" pattern="[0-9]{2}" maxlength="2" class="input_selection" placeholder="до">
+									</div>
 								</div>
 								<div class=" form_selection cost">
 									<label for="" class="label_title">стоимость</label>
-									<input name="num" pattern="[0-9]{3,10}" maxlength="10" class="input_selection" placeholder="от">
-									<input name="num" pattern="[0-9]{5,10}" maxlength="10" class="input_selection" placeholder="до">
+									<div class="input_selection-wrap">
+										<input name="num" pattern="[0-9]{3,10}" maxlength="10" class="input_selection" placeholder="от">
+										<input name="num" pattern="[0-9]{5,10}" maxlength="10" class="input_selection" placeholder="до">
+									</div>
 								</div>
 								<div class="button__wrap">
 									<button class="button button_blue submit_serch">подобрать</button>
@@ -108,8 +129,10 @@
 								</div>
 								<div class="form_selection area">
 									<label for="" class="label_title">площадь</label>
-									<input name="num" pattern="[0-9]{3}" maxlength="3" class="input_selection" placeholder="от">
-									<input name="num" pattern="[0-9]{3}" maxlength="3" class="input_selection" placeholder="до">
+									<div class="input_selection-wrap">
+										<input name="num" pattern="[0-9]{3}" maxlength="3" class="input_selection" placeholder="от">
+										<input name="num" pattern="[0-9]{3}" maxlength="3" class="input_selection" placeholder="до">
+									</div>
 								</div>
 								<div class="form_selection rooms">
 									<label for="" class="label_title">тип</label>
@@ -124,8 +147,10 @@
 								</div>
 								<div class=" form_selection cost">
 									<label for="" class="label_title">стоимость</label>
-									<input name="num" pattern="[0-9]{3,10}" maxlength="10" class="input_selection" placeholder="от">
-									<input name="num" pattern="[0-9]{5,10}" maxlength="10" class="input_selection" placeholder="до">
+									<div class="input_selection-wrap">
+										<input name="num" pattern="[0-9]{3,10}" maxlength="10" class="input_selection" placeholder="от">
+										<input name="num" pattern="[0-9]{5,10}" maxlength="10" class="input_selection" placeholder="до">
+									</div>
 								</div>
 								<div class="button__wrap">
 									<button class="button button_blue submit_serch">подобрать</button>
@@ -148,8 +173,10 @@
 								</div>
 								<div class="form_selection area">
 									<label for="" class="label_title">площадь</label>
-									<input name="num" pattern="[0-9]{3}" maxlength="3" class="input_selection" placeholder="от">
-									<input name="num" pattern="[0-9]{3}" maxlength="3" class="input_selection" placeholder="до">
+									<div class="input_selection-wrap">
+										<input name="num" pattern="[0-9]{3}" maxlength="3" class="input_selection" placeholder="от">
+										<input name="num" pattern="[0-9]{3}" maxlength="3" class="input_selection" placeholder="до">
+									</div>
 								</div>
 								<div class="form_selection rooms">
 									<label for="" class="label_title">тип</label>
@@ -161,8 +188,10 @@
 								</div>
 								<div class=" form_selection cost">
 									<label for="" class="label_title">стоимость</label>
-									<input name="num" pattern="[0-9]{3,10}" maxlength="10" class="input_selection" placeholder="от">
-									<input name="num" pattern="[0-9]{5,10}" maxlength="10" class="input_selection" placeholder="до">
+									<div class="input_selection-wrap">
+										<input name="num" pattern="[0-9]{3,10}" maxlength="10" class="input_selection" placeholder="от">
+										<input name="num" pattern="[0-9]{5,10}" maxlength="10" class="input_selection" placeholder="до">
+									</div>
 								</div>
 								<div class="button__wrap">
 									<button class="button button_blue submit_serch">подобрать</button>
@@ -185,13 +214,17 @@
 								</div>
 								<div class="form_selection area">
 									<label for="" class="label_title">площадь</label>
-									<input name="num" pattern="[0-9]{3}" maxlength="3" class="input_selection" placeholder="от">
-									<input name="num" pattern="[0-9]{3}" maxlength="3" class="input_selection" placeholder="до">
+									<div class="input_selection-wrap">
+										<input name="num" pattern="[0-9]{3}" maxlength="3" class="input_selection" placeholder="от">
+										<input name="num" pattern="[0-9]{3}" maxlength="3" class="input_selection" placeholder="до">
+									</div>
 								</div>
 								<div class=" form_selection cost">
 									<label for="" class="label_title">стоимость</label>
-									<input name="num" pattern="[0-9]{3,10}" maxlength="10" class="input_selection" placeholder="от">
-									<input name="num" pattern="[0-9]{5,10}" maxlength="10" class="input_selection" placeholder="до">
+									<div class="input_selection-wrap">
+										<input name="num" pattern="[0-9]{3,10}" maxlength="10" class="input_selection" placeholder="от">
+										<input name="num" pattern="[0-9]{5,10}" maxlength="10" class="input_selection" placeholder="до">
+									</div>
 								</div>
 								<div class="button__wrap">
 									<button class="button button_blue submit_serch">подобрать</button>
@@ -460,8 +493,7 @@
 				<div class="f_wrap">
 					<div class="f_item f_city">Саратов, ул.Центральная, д.1</div>
 					<div class="f_item f_phone">
-						<div class="phone">+7(999)999-99-99</div>
-						<div class="phone">+7(999)999-99-99</div>
+						<div class="phone">+7(967)505-38-38</div>
 					</div>
 					<div class="f_item f_email">vashimetrv.rf@bk.ru</div>
 					<div class="f_item f_social">Вконтакте</div>
@@ -469,13 +501,6 @@
 			</footer>
 		</section>
 	</div>
-
-	<!--[if lt IE 9]>
-	<script src="libs/html5shiv/es5-shim.min.js"></script>
-	<script src="libs/html5shiv/html5shiv.min.js"></script>
-	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
-	<script src="libs/respond/respond.min.js"></script>
-	<![endif]-->
 	
 	<script src="libs/jquery/jquery-3.3.1.min.js"></script>
 	<script src="libs/fullPage/jquery.fullPage.js"></script>
@@ -488,8 +513,5 @@
 	<script src="js/review.js"></script>
 	<script src="js/contacts.js"></script>
 
-	<!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
-	<!-- Google Analytics counter --><!-- /Google Analytics counter -->
-	
 </body>
 </html>

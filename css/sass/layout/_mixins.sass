@@ -1,3 +1,20 @@
 //responsive
 @function rem($px)
     @return $px / 16px + 0rem
+
+//resolutions
+$tablets: 768px
+$phones: 480px
+$menu: 855px
+
+@mixin tablets
+    @media screen and (max-width: $tablets)
+        @content
+
+@mixin phones
+    @media screen and (max-width: $phones)
+        @content
+
+@mixin menu
+    @media screen and (max-width: $menu)
+        @content

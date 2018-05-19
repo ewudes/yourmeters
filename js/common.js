@@ -94,3 +94,85 @@ var abv = "apartment";
  if (self.ramka) ramka.style.background = '#ECEDEF';
  y.style.background = '#B7BBC2'; ramka = y; 
 }
+
+function Selected(a) {
+	var label = a.value;
+	if (label==1) {
+		document.getElementById("apartment").style.display='block';
+		document.getElementById("home").style.display='none';
+		document.getElementById("land").style.display='none';
+		document.getElementById("commerce").style.display='none';
+		
+	} else if (label==2) {
+		document.getElementById("apartment").style.display='none';
+		document.getElementById("home").style.display='block';
+		document.getElementById("land").style.display='none';
+		document.getElementById("commerce").style.display='none';
+
+	} else if (label==3) {
+		document.getElementById("apartment").style.display='none';
+		document.getElementById("home").style.display='none';
+		document.getElementById("land").style.display='block';
+		document.getElementById("commerce").style.display='none';
+	
+	} else if (label==4) {
+		document.getElementById("apartment").style.display='none';
+		document.getElementById("home").style.display='none';
+		document.getElementById("land").style.display='none';
+		document.getElementById("commerce").style.display='block';
+		
+	} else {
+		document.getElementById("apartment").style.display='none';
+		document.getElementById("home").style.display='none';
+		document.getElementById("land").style.display='none';
+		document.getElementById("commerce").style.display='none';
+	}
+	
+}
+
+const openButton = document.querySelector(".hamburger-menu-link");
+
+function openOverlay(content) {
+  const overlayElement = document.createElement("div");
+  overlayElement.classList.add("overlay");
+
+  const containerElement = document.createElement("div");
+  containerElement.classList.add("container");
+
+  const contentElement = document.createElement("div");
+  contentElement.classList.add("content");
+  contentElement.innerHTML = content;
+  
+  const closeMenu = function() {
+    document.body.removeChild(overlayElement);
+  };
+
+  const closeElement = document.createElement("a");
+  closeElement.classList.add("close");
+  closeElement.textContent = "x";
+  closeElement.href = "#";
+  closeElement.addEventListener("click", closeMenu);
+  
+  const menuItems = contentElement.querySelectorAll('li');
+  
+  for(let item of menuItems) {
+    item.addEventListener("click", closeMenu);
+  }
+
+  overlayElement.appendChild(containerElement);
+  containerElement.appendChild(closeElement);
+  containerElement.appendChild(contentElement);
+
+  return overlayElement;
+}
+
+openButton.addEventListener("click", function(event) {
+  event.preventDefault(); //nav--large-width
+  var mainMenu = document.getElementsByClassName('nav')[0].cloneNode(true);
+  mainMenu.classList.remove('nav--large-width');
+  mainMenu.classList.add('nav--small-width');
+  const overlay = openOverlay(mainMenu.outerHTML);
+  document.body.appendChild(overlay);
+});
+
+
