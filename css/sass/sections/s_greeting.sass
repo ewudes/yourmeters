@@ -4,6 +4,8 @@
 	background-size: cover
 	color: #fff
 	font-family: "CleanvertisingLight", sans-serif
+	@include phones
+		background-position: left bottom
 
 .header
 	display: flex
@@ -44,6 +46,8 @@
 			text-decoration: underline
 
 .cont
+	display: flex
+	align-items: center
 	color: #fff
 	@include menu
 		margin-left: auto
@@ -67,6 +71,7 @@
 	@include tablets
 		text-align: center
 		font-size: rem(16px)
+		margin: 15% 0 5%
 	@include phones
 		font-size: rem(14px)
 
@@ -186,10 +191,13 @@ label
 	display: flex
 	align-items: center
 	padding-top: rem(10px)
+	@include tablets
+		flex-direction: column
+	
 
 .submit_selling
 	margin-left: auto
-	margin-right: rem(20px)
+	margin-right: rem(35px)
 	@include tablets
 		margin: 0
 
@@ -198,6 +206,7 @@ label
 	margin-left: rem(10px)
 	font-family: "CleanvertisingLight", sans-serif
 	@include tablets
+		width: 100%
 		font-size: rem(25px)
 		margin: 0
 

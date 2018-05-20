@@ -95,40 +95,7 @@ var abv = "apartment";
  y.style.background = '#B7BBC2'; ramka = y; 
 }
 
-function Selected(a) {
-	var label = a.value;
-	if (label==1) {
-		document.getElementById("apartment").style.display='block';
-		document.getElementById("home").style.display='none';
-		document.getElementById("land").style.display='none';
-		document.getElementById("commerce").style.display='none';
-		
-	} else if (label==2) {
-		document.getElementById("apartment").style.display='none';
-		document.getElementById("home").style.display='block';
-		document.getElementById("land").style.display='none';
-		document.getElementById("commerce").style.display='none';
 
-	} else if (label==3) {
-		document.getElementById("apartment").style.display='none';
-		document.getElementById("home").style.display='none';
-		document.getElementById("land").style.display='block';
-		document.getElementById("commerce").style.display='none';
-	
-	} else if (label==4) {
-		document.getElementById("apartment").style.display='none';
-		document.getElementById("home").style.display='none';
-		document.getElementById("land").style.display='none';
-		document.getElementById("commerce").style.display='block';
-		
-	} else {
-		document.getElementById("apartment").style.display='none';
-		document.getElementById("home").style.display='none';
-		document.getElementById("land").style.display='none';
-		document.getElementById("commerce").style.display='none';
-	}
-	
-}
 
 const openButton = document.querySelector(".hamburger-menu-link");
 

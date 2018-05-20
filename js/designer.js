@@ -1,6 +1,41 @@
 const openButtonDes = document.querySelector(".title__btn-link");
 
-function openOverlay(content) {
+function Selected(a) {
+	var label = a.value;
+	if (label==1) {
+		document.getElementById("apartment").style.display='block';
+		document.getElementById("home").style.display='none';
+		document.getElementById("land").style.display='none';
+		document.getElementById("commerce").style.display='none';
+		
+	} else if (label==2) {
+		document.getElementById("apartment").style.display='none';
+		document.getElementById("home").style.display='block';
+		document.getElementById("land").style.display='none';
+		document.getElementById("commerce").style.display='none';
+
+	} else if (label==3) {
+		document.getElementById("apartment").style.display='none';
+		document.getElementById("home").style.display='none';
+		document.getElementById("land").style.display='block';
+		document.getElementById("commerce").style.display='none';
+	
+	} else if (label==4) {
+		document.getElementById("apartment").style.display='none';
+		document.getElementById("home").style.display='none';
+		document.getElementById("land").style.display='none';
+		document.getElementById("commerce").style.display='block';
+		
+	} else {
+		document.getElementById("apartment").style.display='none';
+		document.getElementById("home").style.display='none';
+		document.getElementById("land").style.display='none';
+		document.getElementById("commerce").style.display='none';
+	}
+	
+}
+
+function openOverlayDes(content) {
   const overlayElement = document.createElement("div");
   overlayElement.classList.add("overlay");
 
@@ -20,12 +55,6 @@ function openOverlay(content) {
   closeElement.textContent = "x";
   closeElement.href = "#";
   closeElement.addEventListener("click", closeMenu);
-  
-  const menuItems = contentElement.querySelectorAll('li');
-  
-  for(let item of menuItems) {
-    item.addEventListener("click", closeMenu);
-  }
 
   overlayElement.appendChild(containerElement);
   containerElement.appendChild(closeElement);

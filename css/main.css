@@ -98,6 +98,9 @@ body textarea:required:valid {
   background-size: cover;
   color: #fff;
   font-family: "CleanvertisingLight", sans-serif; }
+  @media screen and (max-width: 480px) {
+    .s_greeting {
+      background-position: left bottom; } }
 
 .header {
   display: flex; }
@@ -141,6 +144,8 @@ body textarea:required:valid {
       text-decoration: underline; }
 
 .cont {
+  display: flex;
+  align-items: center;
   color: #fff; }
   @media screen and (max-width: 875px) {
     .cont {
@@ -166,7 +171,8 @@ body textarea:required:valid {
 @media screen and (max-width: 768px) {
   .title {
     text-align: center;
-    font-size: 1rem; } }
+    font-size: 1rem;
+    margin: 15% 0 5%; } }
 @media screen and (max-width: 480px) {
   .title {
     font-size: 0.875rem; } }
@@ -295,10 +301,13 @@ label {
   display: flex;
   align-items: center;
   padding-top: 0.625rem; }
+  @media screen and (max-width: 768px) {
+    .selling {
+      flex-direction: column; } }
 
 .submit_selling {
   margin-left: auto;
-  margin-right: 1.25rem; }
+  margin-right: 2.1875rem; }
   @media screen and (max-width: 768px) {
     .submit_selling {
       margin: 0; } }
@@ -309,6 +318,7 @@ label {
   font-family: "CleanvertisingLight", sans-serif; }
   @media screen and (max-width: 768px) {
     .label_selling {
+      width: 100%;
       font-size: 1.5625rem;
       margin: 0; } }
 
