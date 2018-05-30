@@ -201,6 +201,29 @@ label
 	@include tablets
 		margin: 0
 
+.popup-sell-wrap_none
+	display: none
+
+.popup-sell-wrap
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	display: flex
+	justify-content: center
+	align-items: center
+
+.popup-sell
+	position: absolute
+	top: 50%
+	left: 50%
+	width: 500px
+	height: 450px
+	margin: -225px 0 0 -250px
+	background: #B7BBC2
+	border-radius: 5px
+
 .label_selling
 	font-size: rem(30px)
 	margin-left: rem(10px)
@@ -210,6 +233,29 @@ label
 		font-size: rem(25px)
 		margin: 0
 
+.selling-form
+	display: flex
+	flex-direction: column
+	color: #3d3d3d
+	padding: 10px
+
+.selling-form__lbl
+	display: flex
+	flex-direction: column
+	align-items: center
+
+.selling-form__lbl > input
+	max-width: 300px
+
+.selling-form__lbl > textarea
+	width: 90%
+
+.selling-form > .button_wrap
+	padding-top: 20px
+	text-align: center
+	.button
+		margin: 0 5px
+		
 .arrow-wrap
 	width: 100%
 	display: flex
