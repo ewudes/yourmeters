@@ -16,6 +16,9 @@ h1
 	margin: 0
 	text-transform: uppercase
 
+ul
+	padding: 0
+	
 section
 	height: 100vh
 
@@ -28,8 +31,7 @@ section, footer
 		h2, h3, p
 			color: #fff
 	h2
-		font-size: rem(38px)
-		line-height: rem(56px)
+		font-size: rem(35px)
 		font-family: "CleanvertisingLight", sans-serif
 		text-align: center
 		font-weight: normal
@@ -59,6 +61,8 @@ body textarea:required:valid
 .title
 	&_about
 		color: $blue-color
+		@include tablets
+			margin-bottom: rem(10px)
 	&_work
 		color: #fff
 	&_review

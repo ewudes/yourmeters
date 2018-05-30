@@ -28,6 +28,9 @@ h1 {
   margin: 0;
   text-transform: uppercase; }
 
+ul {
+  padding: 0; }
+
 section {
   height: 100vh; }
 
@@ -37,8 +40,7 @@ li {
 section.s_dark h2, section.s_dark h3, section.s_dark p, footer.s_dark h2, footer.s_dark h3, footer.s_dark p {
   color: #fff; }
 section h2, footer h2 {
-  font-size: 2.375rem;
-  line-height: 3.5rem;
+  font-size: 2.1875rem;
   font-family: "CleanvertisingLight", sans-serif;
   text-align: center;
   font-weight: normal;
@@ -68,6 +70,9 @@ body textarea:required:valid {
 
 .title_about {
   color: #003469; }
+  @media screen and (max-width: 768px) {
+    .title_about {
+      margin-bottom: 0.625rem; } }
 .title_work {
   color: #fff; }
 .title_review {
@@ -431,37 +436,59 @@ label {
   position: relative; }
 
 .container-about {
-  height: 18.75rem; }
+  height: 12.5rem; }
 
 .wrap-about {
   font-family: "CleanvertisingLight", sans-serif;
-  margin-top: 19.375rem; }
+  margin-top: 12.5rem; }
+  @media screen and (max-width: 1123px) {
+    .wrap-about {
+      margin-top: 15.625rem;
+      padding: 0 1.25rem; } }
+  @media screen and (max-width: 480px) {
+    .wrap-about {
+      margin: 0; } }
 
 .wrap-tizers {
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
-  height: 17.625rem;
+  min-height: 12.5rem;
   background: linear-gradient(#c6d8ee, #e8eff7); }
+  @media screen and (max-width: 480px) {
+    .wrap-tizers {
+      display: none; } }
 
 .tizers {
   display: flex;
   justify-content: center;
   color: #003469;
   font-family: "CleanvertisingLight", sans-serif;
-  text-transform: uppercase;
-  padding: 1.25rem 0 0; }
+  text-transform: uppercase; }
   .tizers span {
     font-size: 0.875rem;
     display: block; }
+    @media screen and (max-width: 768px) {
+      .tizers span {
+        font-size: 0.75rem; } }
   .tizers strong {
     font-weight: normal;
     font-size: 1.4375rem;
     display: block; }
+    @media screen and (max-width: 768px) {
+      .tizers strong {
+        font-size: 1.125rem; } }
 
 .tizers__item {
+  display: flex;
   margin: 0 1.25rem; }
+  @media screen and (max-width: 1123px) {
+    .tizers__item {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin: auto; } }
 
 .label_tiz {
   text-align: center;

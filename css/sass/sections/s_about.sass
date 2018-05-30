@@ -3,19 +3,26 @@
 	position: relative	
 
 .container-about
-	height: rem(300px)	
+	height: rem(200px)	
 
 .wrap-about
 	font-family: "CleanvertisingLight", sans-serif
-	margin-top: rem(310px)
+	margin-top: rem(200px)
+	@include about
+		margin-top: rem(250px)
+		padding: 0 rem(20px)
+	@include phones
+		margin: 0	
 
 .wrap-tizers
 	position: absolute
 	left: 0
 	top: 0
 	width: 100%
-	height: rem(282px)
+	min-height: rem(200px)
 	background: linear-gradient(#c6d8ee, #e8eff7)
+	@include phones
+		display: none
 
 .tizers
 	display: flex
@@ -23,17 +30,27 @@
 	color: $blue_color
 	font-family: "CleanvertisingLight", sans-serif
 	text-transform: uppercase
-	padding: rem(20px) 0 0
 	span
 		font-size: rem(14px)
 		display: block
+		@include tablets
+			font-size: rem(12px)
 	strong
 		font-weight: normal
 		font-size: rem(23px)
 		display: block
+		@include tablets
+			font-size: rem(18px)
 
 .tizers__item
+	display: flex
 	margin: 0 rem(20px)
+	@include about
+		flex-direction: column
+		align-items: center
+		text-align: center
+		margin: auto
+		
 
 .label_tiz
 	text-align: center

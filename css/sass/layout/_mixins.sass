@@ -6,6 +6,7 @@
 $tablets: 768px
 $phones: 480px
 $menu: 875px
+$about: 1123px
 
 @mixin tablets
     @media screen and (max-width: $tablets)
@@ -17,4 +18,8 @@ $menu: 875px
 
 @mixin menu
     @media screen and (max-width: $menu)
+        @content
+
+@mixin about
+    @media screen and (max-width: $about)
         @content
