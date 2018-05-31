@@ -552,6 +552,9 @@ label {
 .s_profi {
   background: linear-gradient(#e8eff7, #fff); }
 
+.container-profi {
+  justify-content: center; }
+
 .wrap-profi {
   display: flex; }
 
@@ -572,11 +575,12 @@ label {
     display: inline-block;
     margin: 0;
     color: #9B1818;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     text-transform: uppercase; }
   .profi_right p {
     margin-top: 0rem;
-    font-size: 1rem; }
+    font-size: 1rem;
+    line-height: 1.4; }
 
 .callback {
   background-color: #f7f7f7;
