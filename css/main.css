@@ -583,7 +583,7 @@ label {
 
 .callback {
   background-color: #f7f7f7;
-  padding: 1.5625rem 1.875rem;
+  padding: 1.5625rem 1.25rem;
   border: #003469 0.3125rem solid;
   border-radius: 0.3125rem; }
   .callback h2 {
@@ -600,7 +600,6 @@ label {
     color: #666;
     font-size: 0.875rem; }
   .callback input, .callback select {
-    display: block;
     line-height: 2.5rem;
     height: 2.5rem;
     border: #d9d9d9 0.0625rem solid;
