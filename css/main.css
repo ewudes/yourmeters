@@ -52,8 +52,7 @@ section h2, footer h2 {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  height: 100%;
-  justify-content: space-between; }
+  height: 100%; }
 
 body input:focus:required:invalid,
 body textarea:focus:required:invalid {
@@ -106,6 +105,9 @@ body textarea:required:valid {
   @media screen and (max-width: 480px) {
     .s_greeting {
       background-position: left bottom; } }
+
+.container-greet {
+  justify-content: space-between; }
 
 .header {
   display: flex; }
@@ -551,9 +553,6 @@ label {
 
 .s_profi {
   background: linear-gradient(#e8eff7, #fff); }
-
-.container-profi {
-  justify-content: center; }
 
 .wrap-profi {
   display: flex; }
