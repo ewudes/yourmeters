@@ -253,7 +253,7 @@
 									</label>
 									<label class="selling-form__lbl">
 										<span>Ваш телефон:</span>
-										<input type="text" name="phone" />
+										<input type="text" name="phone" class="phone"/>
 									</label>
 									<div class="button_wrap">
 										<button class="button button_blue selling-btn-sub">Отправить заявку</button>
@@ -374,7 +374,7 @@
 							</label>
 							<label>
 								<span>Ваш телефон:</span>
-								<input type="text" name="phone" required />
+								<input type="text" name="phone" class="phone" required />
 							</label>
 							<div class="button_wrap">
 								<button class="button button_blue">Отправить заявку</button>
@@ -448,6 +448,21 @@
 		</section>
 		<section class="section s_review">
 			<div class="popup-review-wrap"></div>
+			<div class="popup-review" id="popup2">
+				<form class="review-form">
+					<label class="review-form__lbl">
+						<span>Ваше имя:</span>
+						<input type="text" name="name" />
+					</label>
+					<label class="review-form__lbl">
+						<span>Текст отзыва:</span>
+						<textarea name="" id="" cols="30" rows="10"></textarea>
+					</label>
+					<div class="button_wrap">
+						<button class="button button_blue review-btn-sub">Отправить отзыв</button>
+					</div>
+				</form>
+			</div>
 			<div class="review-wrap">
 				<h2 class="title_review">отзывы наших клиентов</h2>
 				<ul class="review__list">
@@ -501,21 +516,6 @@
 					</li>
 				</ul>
 				<button class="button button_blue review-btn" rel="popup2">Оставить отзыв</button>
-				<div class="popup-review" id="popup2">
-					<form class="review-form">
-						<label class="review-form__lbl">
-							<span>Ваше имя:</span>
-							<input type="text" name="name" />
-						</label>
-						<label class="review-form__lbl">
-							<span>Текст отзыва:</span>
-							<textarea name="" id="" cols="30" rows="10"></textarea>
-						</label>
-						<div class="button_wrap">
-							<button class="button button_blue review-btn-sub">Отправить отзыв</button>
-						</div>
-					</form>
-				</div>
 			</div>
 		</section>
 		<section class="section s_contacts">

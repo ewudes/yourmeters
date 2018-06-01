@@ -789,7 +789,7 @@ label {
 .popup-review {
   position: absolute;
   top: 50%;
-  left: 25%;
+  left: 50%;
   display: none;
   z-index: 1000;
   margin: -15.625rem 0 0 -14.0625rem;

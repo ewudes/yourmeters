@@ -143,7 +143,7 @@ openButton.addEventListener("click", function(event) {
 });
 
 
-const phone = document.querySelector("#phone");
+const phone = document.querySelector(".phone");
 phone.addEventListener('keydown', function(event){
   let isDigit = false;
   let isDash = false;
