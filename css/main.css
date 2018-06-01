@@ -52,7 +52,8 @@ section h2, footer h2 {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  height: 100%; }
+  height: 100%;
+  overflow: hidden; }
 
 body input:focus:required:invalid,
 body textarea:focus:required:invalid {
@@ -487,7 +488,8 @@ label {
   position: relative; }
 
 .container-about {
-  height: 12.5rem; }
+  height: 12.5rem;
+  overflow: visible; }
 
 .wrap-about {
   font-family: "CleanvertisingLight", sans-serif;
