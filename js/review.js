@@ -8,3 +8,12 @@ $(function() {
         .toggle();
     });
   });
+
+$('.review-btn').click(function() {
+  var popup_id = $('#' + $(this).attr("rel"));
+  $(popup_id).show();
+  $('.popup-review-wrap').show();
+})
+$('.popup-review-wrap').click(function() {
+  $('.popup-review-wrap, .popup-review').hide();
+})

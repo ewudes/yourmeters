@@ -204,28 +204,28 @@ label
 	@include tablets
 		margin: 0
 
-.popup-sell-wrap_none
-	display: none
-
 .popup-sell-wrap
+	display: none
 	position: fixed
+	z-index: 999
 	top: 0
-	left: 0
 	right: 0
+	left: 0
 	bottom: 0
-	display: flex
-	justify-content: center
-	align-items: center
+	background: #000
+	opacity: 0.5
 
 .popup-sell
+	display: none
 	position: absolute
-	top: 50%
 	left: 50%
-	width: 500px
-	height: 450px
-	margin: -225px 0 0 -250px
-	background: #B7BBC2
-	border-radius: 5px
+	top: 50%
+	z-index: 1000
+	margin: rem(-250px) 0 0 rem(-225px)
+	width: rem(440px)
+	height: rem(450px)
+	background-color: #B7BBC2
+	border-radius: rem(5px)
 
 .label_selling
 	font-size: rem(30px)

@@ -64,6 +64,9 @@ body input:required:valid,
 body textarea:required:valid {
   color: green; }
 
+textarea {
+  resize: none; }
+
 .hidden {
   display: none; }
 
@@ -319,28 +322,28 @@ label {
     .submit_selling {
       margin: 0; } }
 
-.popup-sell-wrap_none {
-  display: none; }
-
 .popup-sell-wrap {
+  display: none;
   position: fixed;
+  z-index: 999;
   top: 0;
-  left: 0;
   right: 0;
+  left: 0;
   bottom: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
+  background: #000;
+  opacity: 0.5; }
 
 .popup-sell {
+  display: none;
   position: absolute;
-  top: 50%;
   left: 50%;
-  width: 500px;
-  height: 450px;
-  margin: -225px 0 0 -250px;
-  background: #B7BBC2;
-  border-radius: 5px; }
+  top: 50%;
+  z-index: 1000;
+  margin: -15.625rem 0 0 -14.0625rem;
+  width: 27.5rem;
+  height: 28.125rem;
+  background-color: #B7BBC2;
+  border-radius: 0.3125rem; }
 
 .label_selling {
   font-size: 1.875rem;
@@ -631,7 +634,7 @@ label {
   position: relative;
   border: 0.125rem solid #fff;
   background: #fff;
-  height: 6.25rem;
+  min-height: 5.625rem;
   border-radius: 0.9375rem;
   margin-bottom: 1.875rem; }
   .work__item:after {
@@ -643,17 +646,17 @@ label {
     border-top: 1.875rem solid #fff; }
   .work__item:last-child:after {
     border: none; }
-  .work__item:nth-child(2):after {
-    left: 90%; }
 
 .work__item-ttl {
-  width: 9.375rem;
+  width: 15%;
   font-family: "roboloBold", sans-serif;
   text-align: center;
   font-size: 1.875rem; }
 
 .work__item-txt {
-  font-size: 1.25rem; }
+  width: 85%;
+  font-size: 1.125rem;
+  padding: 0 1.25rem; }
 
 .s_back {
   background: linear-gradient(#e8eff7, #c6d8ee, #e8eff7); }
@@ -711,6 +714,7 @@ label {
   width: 60%; }
 
 .s_review {
+  position: relative;
   display: flex;
   justify-content: flex-end;
   width: 100%;
@@ -720,6 +724,7 @@ label {
   background-size: cover; }
 
 .review-wrap {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 62.5rem;
@@ -738,7 +743,10 @@ label {
     margin-right: 0.625rem;
     border: 0.3125rem solid transparent;
     border-top-color: #f9b43b;
-    border-bottom: none; }
+    border-bottom: none;
+    transition: all 0.5s ease-out; }
+  .review-item__title:hover {
+    color: #C0C0C0; }
 
 .review-item__content {
   display: flex;
@@ -760,6 +768,59 @@ label {
 .review-item__descr {
   padding: 0 0.625rem; }
 
+.review__list {
+  padding: 0 2.5rem; }
+
+.review-btn {
+  margin: auto;
+  margin-bottom: 1.875rem; }
+
+.popup-review-wrap {
+  display: none;
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: #000;
+  opacity: 0.5; }
+
+.popup-review {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  display: none;
+  z-index: 1000;
+  margin: -15.625rem 0 0 -14.0625rem;
+  width: 27.5rem;
+  height: 28.125rem;
+  background-color: #B7BBC2;
+  border-radius: 0.3125rem; }
+
+.review-form {
+  display: flex;
+  flex-direction: column;
+  color: #3d3d3d;
+  padding: 10px; }
+
+.review-form__lbl {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.review-form__lbl > input {
+  max-width: 300px; }
+
+.review-form__lbl > textarea {
+  width: 90%; }
+
+.review-form > .button_wrap {
+  padding-top: 20px;
+  text-align: center; }
+  .review-form > .button_wrap .button {
+    margin: 0 5px; }
+
 .s_contacts {
   position: relative;
   display: flex;
@@ -770,9 +831,10 @@ label {
   bottom: 0;
   display: flex;
   justify-content: center;
-  background: #fff;
+  background: #3d3d3d;
+  color: #fff;
   width: 100%;
-  height: 100px; }
+  height: 6.25rem; }
 
 .google-map {
   position: absolute;
@@ -781,13 +843,27 @@ label {
 
 .f_wrap {
   display: flex;
-  padding: 10px 0; }
+  padding: 0.625rem 0; }
 
 .f_item {
-  margin: 0 10px;
-  padding: 0 10px;
-  border-left: 2px solid #3d3d3d; }
+  margin: 0 0.625rem;
+  padding: 0 0.625rem;
+  border-left: 0.125rem solid #B7BBC2; }
   .f_item:first-child {
     border: none; }
+  .f_item:hover {
+    color: #9B1818;
+    cursor: pointer; }
+
+.f_item > a, .f_email {
+  color: #fff;
+  text-decoration: none; }
+  .f_item > a:hover, .f_email:hover {
+    color: #9B1818; }
+
+.f_social_vk {
+  width: 3.125rem;
+  height: 3.125rem;
+  margin: 0.625rem 2.5rem; }
 
 /*# sourceMappingURL=main.css.map */

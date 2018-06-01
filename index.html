@@ -239,28 +239,26 @@
 					<div class="selling">
 						<label for="" class="label_selling">продаете недвижимость?</label>
 						<div class="button_wrap submit_selling">
-							<button class="button button_red submit_selling_btn">вам сюда</button>
-							<div class="popup-sell-wrap_none">
-								<div class="popup-sell">
-									<form class="selling-form">
-										<label class="selling-form__lbl">
-											<span>Ваше имя:</span>
-											<input type="text" name="name" />
-										</label>
-										<label class="selling-form__lbl">
-											<span>Опишите недвижимость:</span>
-											<textarea name="" id="" cols="30" rows="10"></textarea>
-										</label>
-										<label class="selling-form__lbl">
-											<span>Ваш телефон:</span>
-											<input type="text" name="phone" />
-										</label>
-										<div class="button_wrap">
-											<button class="button button_blue selling-btn-sub">Отправить заявку</button>
-											<button class="button button_red selling-btn-cls">Закрыть</button>
-										</div>
-									</form>
-								</div>
+							<button class="button button_red submit_selling_btn" rel="popup1">вам сюда</button>
+							<div class="popup-sell-wrap"></div>
+							<div class="popup-sell" id="popup1">
+								<form class="selling-form">
+									<label class="selling-form__lbl">
+										<span>Ваше имя:</span>
+										<input type="text" name="name" />
+									</label>
+									<label class="selling-form__lbl">
+										<span>Опишите недвижимость:</span>
+										<textarea name="" id="" cols="30" rows="10"></textarea>
+									</label>
+									<label class="selling-form__lbl">
+										<span>Ваш телефон:</span>
+										<input type="text" name="phone" />
+									</label>
+									<div class="button_wrap">
+										<button class="button button_blue selling-btn-sub">Отправить заявку</button>
+									</div>
+								</form>
 							</div>
 						</div>
 					</div>
@@ -449,6 +447,7 @@
 			</div>
 		</section>
 		<section class="section s_review">
+			<div class="popup-review-wrap"></div>
 			<div class="review-wrap">
 				<h2 class="title_review">отзывы наших клиентов</h2>
 				<ul class="review__list">
@@ -501,6 +500,22 @@
 						</div>
 					</li>
 				</ul>
+				<button class="button button_blue review-btn" rel="popup2">Оставить отзыв</button>
+				<div class="popup-review" id="popup2">
+					<form class="review-form">
+						<label class="review-form__lbl">
+							<span>Ваше имя:</span>
+							<input type="text" name="name" />
+						</label>
+						<label class="review-form__lbl">
+							<span>Текст отзыва:</span>
+							<textarea name="" id="" cols="30" rows="10"></textarea>
+						</label>
+						<div class="button_wrap">
+							<button class="button button_blue review-btn-sub">Отправить отзыв</button>
+						</div>
+					</form>
+				</div>
 			</div>
 		</section>
 		<section class="section s_contacts">
@@ -516,10 +531,12 @@
 				<div class="f_wrap">
 					<div class="f_item f_city">Саратов, ул.Центральная, д.1</div>
 					<div class="f_item f_phone">
-						<div class="phone">+7(967)505-38-38</div>
+						<a class="phone" href="tel:+79675053838">+7(967)505-38-38</a>
 					</div>
-					<div class="f_item f_email">vashimetrv.rf@bk.ru</div>
-					<div class="f_item f_social">Вконтакте</div>
+					<a class="f_item f_email" href="mailto:vashimetrv.rf@bk.ru">vashimetrv.rf@bk.ru</a>
+					<div class="f_item f_social">
+						<img src="img/decor/vk.png" alt="vk" class="f_social_vk">
+					</div>
 				</div>	
 			</footer>
 		</section>

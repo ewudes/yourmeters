@@ -1,4 +1,5 @@
 .s_review
+	position: relative
 	display: flex
 	justify-content: flex-end
 	width: 100%
@@ -8,6 +9,7 @@
 	background-size: cover
 
 .review-wrap
+	position: relative
 	display: flex
 	flex-direction: column
 	width: rem(1000px)	
@@ -27,6 +29,9 @@
 		border: 0.3125rem solid transparent
 		border-top-color: #f9b43b
 		border-bottom: none
+		transition: all 0.5s ease-out
+	&:hover
+		color: #C0C0C0
 
 .review-item__content
 	display: flex
@@ -47,4 +52,57 @@
 	overflow: inherit
 
 .review-item__descr
-	padding: 0 rem(10px)		
+	padding: 0 rem(10px)
+
+.review__list
+	padding: 0 rem(40px)
+
+.review-btn
+	margin: auto
+	margin-bottom: rem(30px)
+
+.popup-review-wrap
+	display: none
+	position: absolute
+	z-index: 999
+	top: 0
+	right: 0
+	left: 0
+	bottom: 0
+	background: #000
+	opacity: 0.5
+
+.popup-review
+	position: absolute
+	top: 50%
+	left: 25%
+	display: none
+	z-index: 1000
+	margin: rem(-250px) 0 0 rem(-225px)
+	width: rem(440px)
+	height: rem(450px)
+	background-color: #B7BBC2
+	border-radius: rem(5px)
+
+.review-form
+	display: flex
+	flex-direction: column
+	color: #3d3d3d
+	padding: 10px
+
+.review-form__lbl
+	display: flex
+	flex-direction: column
+	align-items: center
+
+.review-form__lbl > input
+	max-width: 300px
+
+.review-form__lbl > textarea
+	width: 90%
+
+.review-form > .button_wrap
+	padding-top: 20px
+	text-align: center
+	.button
+		margin: 0 5px	
