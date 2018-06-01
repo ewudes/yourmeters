@@ -62,9 +62,9 @@ $(document).ready(function() {
     // section nav
     var SECTION_NAV =           'fp-nav';
     var SECTION_NAV_SEL =       '#' + SECTION_NAV;
-    var SECTION_NAV_TOOLTIP =   'fp-tooltip';
+    var SECTION_NAV_TOOLTIP =   'nav-section__item';
     var SECTION_NAV_TOOLTIP_SEL='.'+SECTION_NAV_TOOLTIP;
-    var SHOW_ACTIVE_TOOLTIP =   'fp-show-active';
+    var SHOW_ACTIVE_TOOLTIP =   'nav-section__item--active';
 
     // slide
     var SLIDE_DEFAULT_SEL =     '.slide';
@@ -111,7 +111,7 @@ $(document).ready(function() {
             menu: true,
             anchors:[],
             lockAnchors: false,
-            navigation: false,
+            navigation: true,
             navigationPosition: 'right',
             navigationTooltips: [],
             showActiveTooltip: false,
@@ -122,7 +122,7 @@ $(document).ready(function() {
 
             //scrolling
             css3: true,
-            scrollingSpeed: 700,
+            scrollingSpeed: 500,
             autoScrolling: true,
             fitToSection: true,
             fitToSectionDelay: 1000,

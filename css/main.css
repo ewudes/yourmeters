@@ -100,6 +100,31 @@ textarea {
     .button_red:hover {
       background: #7B1313; }
 
+.nav-section {
+  position: fixed;
+  top: 6.875rem;
+  right: 3.75rem; }
+
+.nav__link-fp {
+  display: flex;
+  width: 0.9375rem;
+  height: 0.9375rem;
+  margin-bottom: 0.3125rem;
+  border: 0.0625rem solid transparent;
+  border-radius: 50%;
+  cursor: pointer; }
+  .nav__link-fp:after {
+    display: block;
+    margin: auto;
+    content: "";
+    width: 0.4375rem;
+    height: 0.4375rem;
+    border-radius: 50%;
+    background-color: #B7BBC2; }
+
+.nav__link-fp:hover {
+  border-color: #B7BBC2; }
+
 .s_greeting {
   background-image: url(../img/bg/top_bg.jpg);
   background-position: center center;
@@ -864,8 +889,11 @@ label {
     color: #9B1818; }
 
 .f_social_vk {
+  display: block;
+  background-image: url("../../img/decor/vk.png");
+  background-size: 3.125rem;
   width: 3.125rem;
   height: 3.125rem;
-  margin: 0.625rem 2.5rem; }
+  margin: 0.625rem 1.25rem; }
 
 /*# sourceMappingURL=main.css.map */
