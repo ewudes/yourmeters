@@ -38,12 +38,31 @@
 	align-items: center
 	width: 100%
 	height: 100%
+	@include tablets
+		flex-direction: column
 
 .slider__left, .slider__right
 	width: 50%	
+	@include tablets
+		height: 50%
+
+.slider__left
+	display: flex
+	flex-direction: column
+	justify-content: center
 
 .slider__right
 	padding: 0 rem(10px)
+	@include tablets
+		width: 95%
+
+.slider__txt-ttl
+	@include tablets
+		text-align: center
+
+.slider__txt-desr
+	@include tablets
+		font-size: rem(16px)	
 
 .slider__img
 	display: flex
@@ -53,6 +72,8 @@
 .slider__pic
 	width: 60%
 	cursor: pointer
+	@include tablets
+		width: 80%
 
 /* увеличенная картинка */
 #magnify 

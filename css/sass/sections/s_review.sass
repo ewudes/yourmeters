@@ -12,10 +12,12 @@
 	position: relative
 	display: flex
 	flex-direction: column
-	width: rem(1000px)	
+	max-width: rem(1000px)	
 	height: 100%
 	background: rgba(#3d3d3d, .6)
 	color: #fff
+	@include tablets
+		width: 100%
 
 .review-item__title
 	display: flex
@@ -37,12 +39,16 @@
 	display: flex
 	height: 0
 	overflow: hidden
-
+	@include tablets
+		flex-direction: column
+		align-items: center
 .review-item__pic
 	width: rem(150px)		
 
 .review-item--active
 	height: rem(200px)
+	@include tablets
+		min-height: 300px
 
 .review-item--active .review-item__title
 	&::before
@@ -53,7 +59,14 @@
 
 .review-item__descr
 	padding: 0 rem(10px)
+	@include tablets
+		display: flex
+		flex-direction: column
+		align-items: center
 
+.review-item__descr-txt
+	@include phones
+		font-size: rem(14px)	
 .review__list
 	padding: 0 rem(40px)
 
@@ -94,6 +107,8 @@
 	display: flex
 	flex-direction: column
 	align-items: center
+	@include tablets
+		width: 100%
 
 .review-form__lbl > input
 	max-width: 300px
@@ -106,3 +121,7 @@
 	text-align: center
 	.button
 		margin: 0 5px	
+
+.revirew-item__img-wrap, .review-item__pic
+	width: rem(100px)
+	height: rem(100px)

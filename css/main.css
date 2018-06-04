@@ -46,6 +46,9 @@ section h2, footer h2 {
   text-align: center;
   font-weight: normal;
   text-transform: uppercase; }
+  @media screen and (max-width: 768px) {
+    section h2, footer h2 {
+      font-size: 1.5rem; } }
 
 .container {
   width: 95%;
@@ -392,6 +395,9 @@ label {
   display: flex;
   flex-direction: column;
   align-items: center; }
+  @media screen and (max-width: 768px) {
+    .selling-form__lbl {
+      width: 100%; } }
 
 .selling-form__lbl > input {
   max-width: 300px; }
@@ -594,23 +600,42 @@ label {
 .profi_left {
   color: #9B1818;
   padding-left: 0; }
+  @media screen and (max-width: 480px) {
+    .profi_left {
+      display: none; } }
   .profi_left i {
     font-size: 4.375rem;
     line-height: 5.625rem; }
+    @media screen and (max-width: 768px) {
+      .profi_left i {
+        font-size: 3.125rem;
+        line-height: 4.375rem; } }
 
 .profi_right {
   font-family: "CleanvertisingLight", sans-serif;
-  padding: 0 1.875rem; }
+  padding: 0 1.25rem; }
+  @media screen and (max-width: 875px) {
+    .profi_right {
+      padding: 0 1.25rem; } }
+  @media screen and (max-width: 768px) {
+    .profi_right {
+      padding: 0 0.625rem; } }
   .profi_right h3 {
     display: inline-block;
     margin: 0;
     color: #9B1818;
     font-size: 1.25rem;
     text-transform: uppercase; }
+    @media screen and (max-width: 480px) {
+      .profi_right h3 {
+        font-size: 1.125rem; } }
   .profi_right p {
     margin-top: 0rem;
     font-size: 1rem;
     line-height: 1.4; }
+    @media screen and (max-width: 768px) {
+      .profi_right p {
+        font-size: 0.875rem; } }
 
 .callback {
   background-color: #f7f7f7;
@@ -649,6 +674,10 @@ label {
     margin: 0.9375rem 0 0.3125rem;
     vertical-align: middle; }
 
+@media screen and (max-width: 875px) {
+  .wrap-profi__right {
+    display: none; } }
+
 .s_work {
   min-height: 28.125rem;
   font-family: "CleanvertisingLight", sans-serif;
@@ -680,11 +709,20 @@ label {
   font-family: "roboloBold", sans-serif;
   text-align: center;
   font-size: 1.875rem; }
+  @media screen and (max-width: 768px) {
+    .work__item-ttl {
+      font-size: 1.25rem; } }
+  @media screen and (max-width: 480px) {
+    .work__item-ttl {
+      font-size: 1rem; } }
 
 .work__item-txt {
   width: 85%;
   font-size: 1.125rem;
   padding: 0 1.25rem; }
+  @media screen and (max-width: 768px) {
+    .work__item-txt {
+      font-size: 0.875rem; } }
 
 .s_back {
   background: linear-gradient(#e8eff7, #c6d8ee, #e8eff7); }
@@ -726,12 +764,34 @@ label {
   align-items: center;
   width: 100%;
   height: 100%; }
+  @media screen and (max-width: 768px) {
+    .item {
+      flex-direction: column; } }
 
 .slider__left, .slider__right {
   width: 50%; }
+  @media screen and (max-width: 768px) {
+    .slider__left, .slider__right {
+      height: 50%; } }
+
+.slider__left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
 
 .slider__right {
   padding: 0 0.625rem; }
+  @media screen and (max-width: 768px) {
+    .slider__right {
+      width: 95%; } }
+
+@media screen and (max-width: 768px) {
+  .slider__txt-ttl {
+    text-align: center; } }
+
+@media screen and (max-width: 768px) {
+  .slider__txt-desr {
+    font-size: 1rem; } }
 
 .slider__img {
   display: flex;
@@ -741,6 +801,9 @@ label {
 .slider__pic {
   width: 60%;
   cursor: pointer; }
+  @media screen and (max-width: 768px) {
+    .slider__pic {
+      width: 80%; } }
 
 /* увеличенная картинка */
 #magnify {
@@ -798,10 +861,13 @@ label {
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 62.5rem;
+  max-width: 62.5rem;
   height: 100%;
   background: rgba(61, 61, 61, 0.6);
   color: #fff; }
+  @media screen and (max-width: 768px) {
+    .review-wrap {
+      width: 100%; } }
 
 .review-item__title {
   display: flex;
@@ -823,12 +889,19 @@ label {
   display: flex;
   height: 0;
   overflow: hidden; }
+  @media screen and (max-width: 768px) {
+    .review-item__content {
+      flex-direction: column;
+      align-items: center; } }
 
 .review-item__pic {
   width: 9.375rem; }
 
 .review-item--active {
   height: 12.5rem; }
+  @media screen and (max-width: 768px) {
+    .review-item--active {
+      min-height: 300px; } }
 
 .review-item--active .review-item__title::before {
   transform: rotate(180deg); }
@@ -838,6 +911,15 @@ label {
 
 .review-item__descr {
   padding: 0 0.625rem; }
+  @media screen and (max-width: 768px) {
+    .review-item__descr {
+      display: flex;
+      flex-direction: column;
+      align-items: center; } }
+
+@media screen and (max-width: 480px) {
+  .review-item__descr-txt {
+    font-size: 0.875rem; } }
 
 .review__list {
   padding: 0 2.5rem; }
@@ -879,6 +961,9 @@ label {
   display: flex;
   flex-direction: column;
   align-items: center; }
+  @media screen and (max-width: 768px) {
+    .review-form__lbl {
+      width: 100%; } }
 
 .review-form__lbl > input {
   max-width: 300px; }
@@ -891,6 +976,10 @@ label {
   text-align: center; }
   .review-form > .button_wrap .button {
     margin: 0 5px; }
+
+.revirew-item__img-wrap, .review-item__pic {
+  width: 6.25rem;
+  height: 6.25rem; }
 
 .s_contacts {
   position: relative;
@@ -905,7 +994,7 @@ label {
   background: #3d3d3d;
   color: #fff;
   width: 100%;
-  height: 6.25rem; }
+  min-height: 6.25rem; }
 
 .google-map {
   position: absolute;
@@ -915,6 +1004,22 @@ label {
 .f_wrap {
   display: flex;
   padding: 0.625rem 0; }
+  @media screen and (max-width: 768px) {
+    .f_wrap {
+      width: 100%; } }
+
+.f_item-left {
+  display: flex; }
+  @media screen and (max-width: 768px) {
+    .f_item-left {
+      flex-direction: column; } }
+  @media screen and (max-width: 480px) {
+    .f_item-left {
+      font-size: 0.875rem; } }
+
+@media screen and (max-width: 768px) {
+  .f_item-left, .f_item-right {
+    width: 50%; } }
 
 .f_item {
   margin: 0 0.625rem;
@@ -925,6 +1030,9 @@ label {
   .f_item:hover {
     color: #9B1818;
     cursor: pointer; }
+  @media screen and (max-width: 768px) {
+    .f_item {
+      border: none; } }
 
 .f_item > a, .f_email {
   color: #fff;
@@ -939,5 +1047,8 @@ label {
   width: 3.125rem;
   height: 3.125rem;
   margin: 0.625rem 1.25rem; }
+  @media screen and (max-width: 768px) {
+    .f_social_vk {
+      margin-left: auto; } }
 
 /*# sourceMappingURL=main.css.map */

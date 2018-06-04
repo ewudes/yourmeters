@@ -11,7 +11,7 @@
 	background: #3d3d3d
 	color: #fff
 	width: 100%
-	height: rem(100px)
+	min-height: rem(100px)
 
 .google-map
 	position: absolute
@@ -21,6 +21,19 @@
 .f_wrap
 	display: flex
 	padding: rem(10px) 0
+	@include tablets
+		width: 100%
+
+.f_item-left
+	display: flex
+	@include tablets
+		flex-direction: column
+	@include phones
+		font-size: rem(14px)	
+
+.f_item-left, .f_item-right
+	@include tablets
+		width: 50%
 
 .f_item
 	margin: 0 rem(10px)
@@ -31,6 +44,8 @@
 	&:hover
 		color: $red-color
 		cursor: pointer
+	@include tablets
+		border: none
 
 .f_item > a, .f_email
 	color: #fff
@@ -45,3 +60,5 @@
 	width: rem(50px)
 	height: rem(50px)
 	margin: rem(10px) rem(20px)
+	@include tablets
+		margin-left: auto
