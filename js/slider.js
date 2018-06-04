@@ -73,5 +73,3 @@ document.addEventListener('DOMContentLoaded', function () {//загрузилс�
   }, false)
 
 }, false);
-
-
