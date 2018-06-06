@@ -103,3 +103,12 @@ phone.addEventListener('keydown', function(event){
     event.preventDefault();
   }
 })
+
+$('.submit_serch').click(function() {
+	var popup_id = $('#' + $(this).attr("rel"));
+	$(popup_id).show();
+	$('.designer-sell-wrap').show();
+})
+$('.designer-sell-wrap, .designer-arrow').click(function() {
+	$('.designer-sell-wrap, .designer-sell').hide();
+})

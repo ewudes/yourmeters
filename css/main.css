@@ -352,7 +352,7 @@ label {
     .submit_selling {
       margin: 0; } }
 
-.popup-sell-wrap {
+.popup-sell-wrap, .designer-sell-wrap {
   display: none;
   position: fixed;
   z-index: 999;
@@ -362,6 +362,56 @@ label {
   bottom: 0;
   background: #000;
   opacity: 0.5; }
+
+.designer-sell {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1000;
+  margin: -20% -40%;
+  width: 80%;
+  height: 70%;
+  background-color: #B7BBC2;
+  border-radius: 0.3125rem;
+  overflow: auto; }
+  @media screen and (max-width: 875px) {
+    .designer-sell {
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100vh;
+      margin: 0;
+      border-radius: 0; } }
+
+.designer-sell__list {
+  color: #3d3d3d;
+  padding: 0.625rem 1.25rem; }
+
+.designer-sell__content {
+  display: flex; }
+
+.designer-sell__descr-title {
+  font-family: "RobotoBold", serif;
+  margin-bottom: 0.625rem; }
+
+.designer-arrow {
+  display: none; }
+  @media screen and (max-width: 875px) {
+    .designer-arrow {
+      display: block; } }
+
+.designer-arrow, .designer-arrow-pic {
+  width: 50px;
+  height: 50px;
+  float: right;
+  margin: 0.3125rem; }
+
+.designer-arrow-pic {
+  transform: rotate(180deg); }
+
+.designer-sell__descr {
+  padding: 0 1.25rem; }
 
 .popup-sell {
   display: none;
